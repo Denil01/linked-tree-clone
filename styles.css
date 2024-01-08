@@ -46,7 +46,7 @@ nav {
     position: fixed;
     top: 0;
     z-index: 10;
-    transition: background-color 1s ease-out;
+    transition: background-color 1s ease-in-out;
     backdrop-filter: blur(20px);
 }
 
