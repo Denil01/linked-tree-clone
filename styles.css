@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg: rgb(10, 10, 10);
+    --color-tile: rgb(37, 37, 37);
+    --color-btn: rgb(57, 57, 57);
+    --color-white: rgb(240, 240, 240);
+    --color-link: rgb(52, 52, 52);
+
+    --transition: cubic-bezier(0.12, 2.0, 0.78, 1.5) 0.2s;
+}
+
+body {
+    margin: 0 auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(to bottom, #1a1a2e, #000000);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    background-attachment: fixed;
+}
+
+
+/* ===================== NAVBAR ===================== */
+nav {
+    width: 95%;
+    height: 70px;
+    border-radius: 40px;
+    max-width: 788px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px auto 0;
+    padding: 12px;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    transition: background-color 1s ease-out;
+    backdrop-filter: blur(20px);
+}
+
+/* Change navbar styles on scroll using JavaScript */
+.window-scroll {
+    background-color: rgba(57, 57, 57, 0.7);
+}
+
+.display-items {
+    display: flex;
+}
+
+#logo-img {
+    width: 48px;
+    border-radius: 50%;
+}
+
+nav p {
+    margin-left: -10px;
+    display: none;
+}
+
+.share-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-tile);
+}
+
+.share-button svg {
+    margin-left: 12px;
+    margin-top: 12px;
+}
+
+
+/* ===================== CONTAINER ===================== */
+.container {
+    width: 91%;
+    max-width: 680px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.image-container img {
+    width: 96px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+} 
+
+.container > p {
+    margin-bottom: 30px;
+}
+
+a {
+    color: var(--color-white);
+}
+
+.tile {
+    width: 100%;
+    background-color: var(--color-tile);
+    margin: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tile:hover {
+    transform: scale(1.02);
+    transition: var(--transition);
+}
+
+.icon {
+    height: 47px;
+    width: 47px;
+    margin: 8px 8px;
+}
+
+.icon img {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.tile-share-button {
+    width: 40px;
+    height: 40px;
+    margin: 8px;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.tile:hover .tile-share-button {
+    background: var(--color-btn);
+}
+
+.tile:hover .tile-share-button:hover {
+    background-color: var(--color-link);
+}
+
+.tile-share-button svg {
+    margin-left: 12px;
+    margin-top: 12px;
+    display: none;
+}
+
+.tile:hover .tile-share-button svg {
+    display: inline-block;
+}
